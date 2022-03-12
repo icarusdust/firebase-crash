@@ -16,6 +16,10 @@ workflows:
           find . -name "Podfile" -execdir pod install \;
           flutter build ios --debug --no-codesign
     artifacts:
-       - /tmp/xcodebuild_logs/*.log
-       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
-       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+#        - /tmp/xcodebuild_logs/*.log
+#        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+#        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+       
+      - /tmp/xcodebuild_logs/*.log
+      - flutter_drive.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
