@@ -4,8 +4,6 @@ workflows:
     instance_type: mac_pro
     max_build_duration: 120
     environment:
-      groups:
-        - ghost
       vars:
         XCODE_WORKSPACE: "Runner.xcworkspace"
         XCODE_SCHEME: "Runner"                
