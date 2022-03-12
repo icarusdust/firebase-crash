@@ -6,7 +6,8 @@ workflows:
     environment:
       vars:
         XCODE_WORKSPACE: "Runner.xcworkspace"
-        XCODE_SCHEME: "Runner"                
+        XCODE_SCHEME: "Runner"       
+        BUNDLE_ID: "com.example.firebaseCrash"      
       flutter: stable
       xcode: latest
       cocoapods: default
