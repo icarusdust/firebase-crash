@@ -20,7 +20,7 @@ workflows:
           cd . && flutter packages pub get
       - name: Pod install
         script: |
-          find . -name "Podfile" -execdir pod install \;
+          find . -name "Podfile" -execdir pod deintegrate && pod install \;
       - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
         script: |
           keychain initialize
