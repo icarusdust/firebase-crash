@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
+import 'package:sentry/sentry.dart';
 
 Future<void> main() async {
   await SentryFlutter.init(
@@ -15,6 +16,16 @@ Future<void> main() async {
 
   // or define SENTRY_DSN via Dart environment variable (--dart-define)
 }  
+
+
+try {
+  aMethodThatMightFail();
+} catch (exception, stackTrace) {
+  await Sentry.captureException(
+    exception,
+    stackTrace: stackTrace,
+  );
+}
 
 void main() {
   runApp(MyApp());
