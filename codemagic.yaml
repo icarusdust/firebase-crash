@@ -9,7 +9,7 @@ workflows:
       vars:
         XCODE_WORKSPACE: "ios/Runner.xcworkspace" # <-- Put your encrypted Certificate Private Key here
         XCODE_SCHEME: "Runner"
-        BUNDLE_ID: "com.example.firebaseCrash"
+        BUNDLE_ID: "com.firebaseCrash"
       flutter: 2.8.1
       xcode: 12.5
       cocoapods: default
