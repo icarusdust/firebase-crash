@@ -18,14 +18,14 @@ Future<void> main() async {
 }  
 
 
-try {
-  aMethodThatMightFail();
-} catch (exception, stackTrace) {
-  await Sentry.captureException(
-    exception,
-    stackTrace: stackTrace,
-  );
-}
+// try {
+//   aMethodThatMightFail();
+// } catch (exception, stackTrace) {
+//   await Sentry.captureException(
+//     exception,
+//     stackTrace: stackTrace,
+//   );
+// }
 
 void main() {
   runApp(MyApp());
